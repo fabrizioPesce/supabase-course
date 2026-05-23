@@ -66,15 +66,6 @@ function Dashboard() {
     useEffect(() => {
         fetchMetrics();
 
-        /**
-            Challenge:
-            * 1) Call this new channel 'deal-changes'.
-            * 2) Listen for all types of event (e.g. INSERT, UPDATE and DELETE).
-            * 3) Add the schema (Hint: Check your Supabase Table Editor) and table name.
-            * 4) Log the 'new' property of the 'payload' object to the console and save (Cmd/Ctrl + s).
-            * 5) Navigate to your Supabase Table Editor and insert another row
-        */
-
         const channel = supabase
             .channel('deal-changes')
             .on(
